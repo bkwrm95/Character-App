@@ -1,0 +1,20 @@
+{
+  "name": "typescript-lambda",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "package": "npm run build && sls package",
+    "deploy": "npm run build && aws_creds && sls deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mysql": "^2.15.5",
+    "@types/node": "^10.11.7",
+    "@types/aws-lambda": "^8.10.13"
+  },
+  "dependencies": {
+    "mysql": "^2.16.0"
+  }
+}
