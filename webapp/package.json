@@ -1,0 +1,25 @@
+{
+  "name": "typescript-lambda-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "config": {
+    "webapp_url": "dnd.laurenandmatthew.info",
+    "s3_url": "s3://$npm_package_config_webapp_url"
+  },
+  "scripts": {
+    "clear_bucket": "cross-var aws s3 rm s3://$npm_package_config_webapp_url --recursive",
+    "push_bucket": "cross-var aws s3 cp dist/webapp/ s3://$npm_package_config_webapp_url --recursive --acl public-read",
+    "deploy_webapp": "npm run clear_bucket & npm run push_bucket"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "cross-var": "^1.1.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.0",
+    "node-sass": "^4.11.0",
+    "typescript": "^3.2.2"
+  }
+}

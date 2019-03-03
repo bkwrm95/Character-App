@@ -1,6 +1,11 @@
-# package directories
-node_modules
-jspm_packages
+# Package directories
+/**/node_modules/
 
 # Serverless directories
-.serverless
+/**/.serverless/
+
+# IDE Directories
+/.idea/
+
+# Compiled Code
+/**/dist/

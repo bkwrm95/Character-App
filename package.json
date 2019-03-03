@@ -3,18 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "rimraf ./dist && tsc",
-    "package": "npm run build && sls package",
-    "deploy": "npm run build && aws_creds && sls deploy"
+    "build_api": "cd api && npm run build_api",
+    "package_api": "cd api && npm run package_api",
+    "deploy_api": "cd api && npm run deploy_api",
+    "clear_bucket": "cd api && npm run clear_bucket",
+    "push_bucket": "cd api && npm run push_bucket",
+    "deploy_webapp": "cd api && npm run deploy_webapp"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@types/mysql": "^2.15.5",
-    "@types/node": "^10.11.7",
-    "@types/aws-lambda": "^8.10.13"
-  },
-  "dependencies": {
-    "mysql": "^2.16.0"
-  }
+  "author": "bkwrm95",
+  "license": "ISC"
 }

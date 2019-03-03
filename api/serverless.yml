@@ -37,12 +37,12 @@ package:
   - .idea/**/*
   - .serverless/**/*
   - src/**/*
-  - package.json
-  - tsconfig.json
+  - "*.json"
   include:
 
 
 functions:
+# For each function, add new export in /index.js pointing to correct Controller
 
 #  server:
 #    handler: dist/server.handler
